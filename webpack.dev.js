@@ -8,6 +8,7 @@ module.exports = merge(common, {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+        assetModuleFilename: "[path][name].[ext]",
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -21,5 +22,18 @@ module.exports = merge(common, {
                 use: ["style-loader", "css-loader", "sass-loader"],
             },
         ],
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "public"),
+        },
+        client: {
+            progress: true,
+            overlay: true,
+        },
+        hot: true,
+        compress: true,
+        port: 8000,
+        open: "true",
     },
 })

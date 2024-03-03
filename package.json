@@ -12,6 +12,7 @@
   "author": "YanFan Hw",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^5.3.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.10.0",
     "css-minimizer-webpack-plugin": "^6.0.0",
